@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvhgyqxullhx"]
+[gd_scene load_steps=5 format=3 uid="uid://cvhgyqxullhx"]
 
 [ext_resource type="Script" uid="uid://o1dm1bubcfda" path="res://scenes/app/app_root.gd" id="1_wfrj6"]
 [ext_resource type="Script" uid="uid://ds4ll3n6mh8eh" path="res://scenes/app/bgm_player.gd" id="3_frup3"]
 [ext_resource type="Script" uid="uid://vbgoyvrgg4ng" path="res://scenes/app/sfx_player.gd" id="4_frup3"]
+[ext_resource type="PackedScene" uid="uid://b7yln7w1s6bmc" path="res://scenes/player/player.tscn" id="4_kinsj"]
 
 [node name="AppRoot" type="Node"]
 script = ExtResource("1_wfrj6")
@@ -12,6 +13,8 @@ script = ExtResource("3_frup3")
 
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource("4_frup3")
+
+[node name="Player" parent="." instance=ExtResource("4_kinsj")]
 
 [connection signal="finished" from="BGMPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="finished" from="SFXPlayer" to="." method="_on_audio_stream_player_finished"]

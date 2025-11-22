@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://duljlfvqkjgh1"]
+
+[ext_resource type="Script" uid="uid://bhrcieenvrt10" path="res://scenes/player/states/state_machine.gd" id="1_c5a0w"]
+[ext_resource type="Script" uid="uid://bujjop4ntrbfd" path="res://scenes/player/states/idle.gd" id="2_8q67x"]
+[ext_resource type="Script" uid="uid://dhqs8rryvdwo5" path="res://scenes/player/states/running.gd" id="4_xo0h2"]
+[ext_resource type="Script" uid="uid://dngw1ekq3yekb" path="res://scenes/player/states/jumping.gd" id="5_46qdn"]
+[ext_resource type="Script" uid="uid://5bspaa6v6d4c" path="res://scenes/player/states/falling.gd" id="6_c5a0w"]
+[ext_resource type="Script" uid="uid://dgxumdhomfiwe" path="res://scenes/player/states/dashing.gd" id="6_h2g4o"]
+
+[node name="StateMachine" type="Node"]
+script = ExtResource("1_c5a0w")
+
+[node name="Idle" type="Node" parent="."]
+script = ExtResource("2_8q67x")
+
+[node name="Running" type="Node" parent="."]
+script = ExtResource("4_xo0h2")
+
+[node name="Jumping" type="Node" parent="."]
+script = ExtResource("5_46qdn")
+
+[node name="Falling" type="Node" parent="."]
+script = ExtResource("6_c5a0w")
+
+[node name="Dashing" type="Node" parent="."]
+script = ExtResource("6_h2g4o")
